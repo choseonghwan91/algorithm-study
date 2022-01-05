@@ -139,6 +139,7 @@ const testcase = "...!@BaT#*..y.abcdefghijklm";
 // const testcase = "123_.def";
 // const testcase = "abcdefghijklmn.p";
 console.log(solution(testcase));
+
 //
 //
 //
