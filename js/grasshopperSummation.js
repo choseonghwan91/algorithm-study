@@ -20,3 +20,8 @@ function solution(num) {
 }
 
 console.log(solution(8));
+
+function summation(num) {
+  return (num * (num + 1)) / 2;
+}
+console.log(summation(8));
