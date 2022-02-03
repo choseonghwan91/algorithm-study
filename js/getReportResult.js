@@ -62,6 +62,8 @@
 // 제한시간 안내
 // 정확성 테스트 : 10초
 
+// https://programmers.co.kr/learn/courses/30/lessons/92334?language=javascript
+
 //
 //
 //
