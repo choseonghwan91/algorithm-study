@@ -81,21 +81,30 @@ const K = 2;
 // [2,1,1,0]
 
 // test case 2
-// const IdList = ["con", "ryan"]
-// const Report = ["ryan con", "ryan con", "ryan con", "ryan con"]
+// const IdList = ["con", "ryan"];
+// const Report = ["ryan con", "ryan con", "ryan con", "ryan con"];
 // const K = 3;
 // [0,0]
 
 function solution(id_list, report, k) {
-  var answer = [];
+  let answer = [];
+  const reportObj = {};
 
-  let reportObj = {};
   report.forEach((rpt) => {
     const reportArr = rpt.split(" ");
-    console.log(reportArr);
-    reportObj[reportArr[1]] = reportArr[0];
-    console.log(reportObj);
+    const reporter = reportArr[0];
+    const gotReport = reportArr[1];
+
+    if (!reportObj[gotReport]) {
+      reportObj[gotReport] = [reporter];
+    } else if (reportObj[gotReport].includes(reporter)) {
+      return;
+    } else {
+      reportObj[gotReport] = [...reportObj[gotReport], reporter];
+    }
   });
+
+  console.log(Object.values(reportObj));
 
   return answer;
 }
